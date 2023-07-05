@@ -4,7 +4,14 @@ const cors = require('cors');
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://todo-19kmg0ygs-ankitmrmishra.vercel.app/", // Allow requests from this origin
+    methods: "GET,POST,DELETE", // Allow specific HTTP methods
+    allowedHeaders: "Content-Type,Authorization", // Allow specific headers
+  })
+);
+app.use(bodyParser.urlencoded({ extended: true }));
 
 let todos = [];
 
