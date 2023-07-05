@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "https://todo-19kmg0ygs-ankitmrmishra.vercel.app/", // Allow requests from this origin
+    origin: "https://todo-em1kj5cdq-ankitmrmishra.vercel.app/", // Allow requests from this origin
     methods: "GET,POST,DELETE", // Allow specific HTTP methods
     allowedHeaders: "Content-Type,Authorization", // Allow specific headers
   })
